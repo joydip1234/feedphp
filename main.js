@@ -23,14 +23,20 @@ window.addEventListener('load', function () {
         req.addEventListener('readystatechange', function () {
             if (this.readyState == 4 && this.status == 200) {
                 var txt = eval(this.response);
-                var name = txt.split(":");
-                $('notification').style.display = "block";
-                $('notification').innerHTML = ('data successfully stored ' + name[0]);
+                
+                $('notification').style.marginTop = 20+"vh";
+                $('notification').style.transform = "scale(1)";
+                $('notification').style.opacity = "1";
+                $('notification').innerHTML = ('data successfully stored ' + txt[0]);
                 setTimeout(function () {
-                    $('notification').style.display = "none";
-                }, 5000);
+                    $('notification').style.transform = "scale(0)";
+                    $('notification').style.opacity = "0";
+                    setTimeout(function(){
+                        
+                        $('notification').style.marginTop = -50+"vh"; 
+                    },1000);
+                }, 2000);
             }
         });
     }
-
 });

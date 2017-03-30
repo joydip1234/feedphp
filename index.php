@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <meta content="" charset="utf-8">
@@ -60,7 +59,7 @@
             transition: .25s;
             border-radius: 2px;
             text-transform: uppercase;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         }
 
         input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
@@ -82,11 +81,20 @@
             padding: 20px;
             background-color: #d9a3a3;
             color: white;
-            display: none;
-            max-width: 400px;
-            margin: 20px auto;
+            display: block;
+            width: 50vw;
             transition: 0.3s;
-            animation: fromTop 0.2s ease-in;
+            /*animation: fromTop 0.2s ease-in;*/
+            transition: .4s;
+            border-radius: 2px;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            z-index: 1000;
+            position:fixed;
+            top: 20vh;
+            margin-top:-50vh;
+            left: 25vw;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
         }
 		.welcome_msg{
 			display:block;
@@ -113,6 +121,10 @@
 				background-color: rgba(34, 56, 67, 0.9);
 				color: white;
 			}
+			#notification{
+				width: 80vw;
+				left: 10vw;
+			}
 
 		}
 
@@ -138,7 +150,7 @@
     <input class="input" type="text" name="name" id="name" placeholder="name" autocomplete="off"/><br>
     <input class="input" type="email" name="mail" id="mail" placeholder="mail" autocomplete="off"/><br>
     <textarea class="input" placeholder="your feedback" name="feed" id="feed" style="resize: none;min-height:30vh;"></textarea><br>
-    <button class="button" type="submit" id="submitBtn">submit</button>
+    <button class="button" type="submit" id="submitBtn" style="float: right;">submit</button>
     <span style="clear: both;display: block"></span>
 
 </div>
