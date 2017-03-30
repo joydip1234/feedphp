@@ -211,8 +211,8 @@ td{
 
 <div id="form">
 <label id="label">Admin Page</label>
-<input type="name" name="uname" id="uname" placeholder="user name" value="baniksudipta" />
-<input type="password" name="password" placeholder="password" id="password" value="root">
+<input type="name" name="uname" id="uname" placeholder="user name" />
+<input type="password" name="password" placeholder="password" id="password"/>
 <button id="adminSubmit">SUBMIT</button>
 </div>
 
