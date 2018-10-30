@@ -7,7 +7,7 @@
  */
 
 if(!empty($_POST)){
-    //$file = fopen("new.txt","a");
+    $file = fopen("new.txt","a");
     if(isset($_POST['ajax'])){
         try{
             $file = fopen("feedback.csv","a");
